@@ -369,11 +369,6 @@ void body()
     glVertex3f(-6,-2,-4);
 
     //backside
-    /*glVertex3f(6,-2,-20);
-    glVertex3f(-6,-2,-20);
-    glVertex3f(-6,2,-20);
-    glVertex3f(6,2,-20);*/
-
     glColor3f(1,1,0);
     glVertex3f(6,-2,-20);
     glVertex3f(-6,-2,-20);
@@ -755,33 +750,6 @@ void myDisplayFunc(void)
      //glTranslatef(4,0,20);
      spaceship();
 
-/* plane();
-
- if(launch1 == 1 && translateZ >= -40)
- {
-     glPushMatrix();
-     glTranslatef(0,0,translateZ);
-     if(first == 1)
-        FirstSetOfMissiles();
-     if(second == 1)
-        SecondSetOfMissiles();
-     glPopMatrix();
- }
-
-if(first == 0 && second == 0)
-{
-    FirstSetOfMissiles();
-    SecondSetOfMissiles();
-}
-else if(first == 1 && second == 0)
-{
-    SecondSetOfMissiles();
-}
-else if(first == 0 && second == 1)
-{
-    FirstSetOfMissiles();
-}*/
-
  glPopMatrix();
  glFlush();
  glutSwapBuffers();
@@ -789,7 +757,6 @@ else if(first == 0 && second == 1)
  {
      translateZ = translateZ - 0.01;
  }
-
 
  glutPostRedisplay();
 }
@@ -805,30 +772,15 @@ void myKeyboardFunc(unsigned char key, int x, int y)
 {
   switch (key)
   {
-    case 'f' :
-    case 'F' : if(second == 1)
-                  second = 3;
-               if(first == 0)
-                  first = 1;
-               else if(first == 1)
-                  first = 3;
-               launch1 = 1, translateZ = 0;
-               break;
+    case 'l':
+    case 'L':
+        glPolygonMode(GL_FRONT_AND_BACK, GL_LINE);
+        break;
 
-    case 's' :
-    case 'S' : if(first == 1)
-                  first = 3;
-               if(second == 0)
-                  second = 1;
-               else if(second == 1)
-                  second = 3;
-               launch1 = 1, translateZ = 0;
-               break;
-
-    case 'r' :
-    case 'R' : first = 0, second = 0, launch1 = 0;
-               break;
-    case 27  : exit(1); break;
+    case 'k':
+    case 'K':
+        glPolygonMode(GL_FRONT_AND_BACK, GL_FILL);
+        break;
   }
   glFlush();
   glutPostRedisplay();
@@ -931,9 +883,11 @@ int main( int argc, char **argv)
  glutMotionFunc(myMotionFunc);
  glutMouseFunc(myMouseFunc);
  cout<<"Press letter "<<endl;
- cout<<"r or R to reload missiles " <<endl;
- cout<<"f or F to launch first set of missiles "<<endl;
- cout<<"s or S to launch second set of missiles "<<endl;
+ //cout<<"r or R to reload missiles " <<endl;
+ //cout<<"f or F to launch first set of missiles "<<endl;
+ //cout<<"s or S to launch second set of missiles "<<endl;
+ cout<<"L or l to change view of the model to wireframe"<<endl;
+ cout<<"K or k to change view of the model to fillframe"<<endl;
  glutMainLoop(); // Display everything and wait
  return 0;
 }
