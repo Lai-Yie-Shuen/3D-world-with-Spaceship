@@ -1,0 +1,7 @@
+# depslib dependency file v1.0
+1720103035 source:c:\users\yshue\onedrive\documents\mmu\cgd6214 computer graphics fundamentals\project\spaceship\spaceship.cpp
+	<GL\glut.h>
+	<math.h>
+	<stdlib.h>
+	<iostream>
+
