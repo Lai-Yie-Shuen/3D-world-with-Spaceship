@@ -1,0 +1,25 @@
+# depslib dependency file v1.0
+1686104624 source:c:\users\yshue\onedrive\documents\mmu\cgd6214 computer graphics fundamentals\project\world\imagemanipulation.cpp
+	<stdio.h>
+	<stdlib.h>
+	<GL/glut.h>
+	"ReadBMP.h"
+	"ImageManipulation.h"
+
+1686104630 c:\users\yshue\onedrive\documents\mmu\cgd6214 computer graphics fundamentals\project\world\readbmp.h
+
+1686104627 c:\users\yshue\onedrive\documents\mmu\cgd6214 computer graphics fundamentals\project\world\imagemanipulation.h
+
+1720247823 source:c:\users\yshue\onedrive\documents\mmu\cgd6214 computer graphics fundamentals\project\world\readbmp.cpp
+	<stdio.h>
+	<stdlib.h>
+	<GL/glut.h>
+	"ReadBMP.h"
+
+1720251125 source:c:\users\yshue\onedrive\documents\mmu\cgd6214 computer graphics fundamentals\project\world\world.cpp
+	<GL\glut.h>
+	<iostream>
+	<stdlib.h>
+	"ReadBMP.h"
+	"ImageManipulation.h"
+
